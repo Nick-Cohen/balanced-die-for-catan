@@ -61,11 +61,12 @@ class Balanced_die:
                 print('r is ', r)
         for k in list(rolls.keys()):
             print(k, ": ", rolls[k]/nsamples)
-    
-        
-        
-# to use
-# bd = Balanced_die()
-# bd.roll()
-# bd.roll()
-# bd.roll()...
+
+def wait_for_enter():
+    input("Press Enter to roll the die...")
+
+if __name__ == "__main__":
+    bd = Balanced_die()
+    while True:
+        wait_for_enter()
+        print(bd.roll())
